@@ -6,13 +6,13 @@
 
 自动平衡网页声音大小，支持 **0–500% 音量**与**逐页控制**。音频在本机处理，界面支持简体中文和英文。
 
-[下载 1.1.2](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2) · [使用指引](docs/USAGE.md) · [兼容性说明](docs/COMPATIBILITY.md)
+[下载最新版](https://github.com/UFOAlastor/volume-balancer/releases/latest) · [使用指引](docs/USAGE.md) · [兼容性说明](docs/COMPATIBILITY.md)
 
 ## 安装或更新
 
 适用于 **Microsoft Edge 116+**。目前通过 GitHub 安装包手动安装；此发布不代表 Edge 商店已经上架。
 
-1. 在[发布页](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2)下载 **volume-balancer-1.1.2.zip**，解压到准备长期保留的文件夹。
+1. 在[最新版发布页](https://github.com/UFOAlastor/volume-balancer/releases/latest)的 **Assets（资源）** 中下载扩展安装包（文件名以 `volume-balancer-` 开头的 ZIP 文件），解压到准备长期保留的文件夹。
 2. 打开 `edge://extensions/`，开启「开发人员模式」。
 3. 点击「加载解压缩的扩展」，选择包含 `manifest.json` 的解压目录。如果下载的是仓库源码，请选择其中的 **extension** 文件夹。
 4. 固定 **Volume Balancer** 图标，刷新已有音视频网页，然后正常播放。

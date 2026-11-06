@@ -6,13 +6,13 @@
 
 Automatically balance sound levels across web pages, with **0–500% volume** and **per-page controls**. Audio is processed locally. The interface supports English and Simplified Chinese.
 
-[Download 1.1.2](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2)
+[Download the latest version](https://github.com/UFOAlastor/volume-balancer/releases/latest)
 
 ## Install or update
 
 Requires **Microsoft Edge 116+**. Install manually using the GitHub package below. This release does not indicate availability in the Edge Add-ons store.
 
-1. Download **volume-balancer-1.1.2.zip** from the [release page](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2) and extract it to a folder you intend to keep.
+1. Download the extension ZIP (the file whose name starts with `volume-balancer-`) from **Assets** on the [latest release page](https://github.com/UFOAlastor/volume-balancer/releases/latest) and extract it to a folder you intend to keep.
 2. Open `edge://extensions/` and enable **Developer mode**.
 3. Select **Load unpacked**, then choose the extracted folder containing `manifest.json`. If you downloaded the repository source instead, select its **extension** folder.
 4. Pin **Volume Balancer**, refresh any existing media pages, and start playback.

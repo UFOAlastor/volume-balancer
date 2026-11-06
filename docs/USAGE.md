@@ -14,6 +14,6 @@
 
 关闭自动模式不会停止已开启的整页接管，请另用「停止整页」或「停止全部接管」。
 
-当前版本为 [1.1.2](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2)，已在 GitHub 发布。更新时保留原安装目录以沿用设置。逐页控制在扩展重载/更新或浏览器重启后重置。迁移时先记录设置并停用旧安装，避免两套扩展同时处理同一网页。
+安装包见 [GitHub 最新版发布页](https://github.com/UFOAlastor/volume-balancer/releases/latest)。更新时保留原安装目录以沿用设置。逐页控制在扩展重载/更新或浏览器重启后重置。迁移时先记录设置并停用旧安装，避免两套扩展同时处理同一网页。
 
 [兼容性说明](COMPATIBILITY.md) · [来源与致谢](ACKNOWLEDGEMENTS.md) · [完整 MIT 许可](../LICENSE)
