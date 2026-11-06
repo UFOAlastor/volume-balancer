@@ -2,10 +2,10 @@
   const elements = new Map();
   const roots = new Set();
   let settings = { volume: 100, normalize: true, autoEnable: true, maxDbfs: -1, enhancement: 'off' };
-  // Bilibili persists every volumechange, including nonzero leveling writes.
-  // Observe decoded PCM without changing player state; the action popup can
-  // upgrade this tab to tabCapture using the browser's activeTab grant.
-  const nativeOnly = /(^|\.)bilibili\.com$/.test(globalThis.location?.hostname || '');
+  const LEASE = 'data-volume-balancer-lease', ACK = 'data-volume-balancer-ack';
+  const INTENT = 'data-volume-balancer-intent';
+  const CONTROL = 'data-volume-balancer-control';
+  const controlling = media => performance.now() < Number(media.getAttribute(CONTROL) || 0);
   let captured = false;
   let ready = false;
   let engine;
@@ -44,6 +44,9 @@
       quietly(() => rememberVolume(media, entry));
       quietly(() => media.removeEventListener('volumechange', entry.onVolume));
       quietly(() => media.removeEventListener('volumechange', entry.onMute));
+      quietly(() => media.removeEventListener('volume-balancer-intent', entry.onIntent));
+      quietly(() => media.removeEventListener('volume-balancer-control', entry.onControl));
+      quietly(() => media.removeEventListener('volume-balancer-expired', entry.onExpire));
       quietly(() => release(entry));
       quietly(() => write(media, entry, entry.original));
     }
@@ -157,7 +160,7 @@
   }
 
   const active = () => alive && ready && documentActive && settings.autoEnable && !captured;
-  const nativeVolume = entry => !nativeOnly && active() && settings.volume === 0 ? 0 : entry.original;
+  const nativeVolume = entry => active() && settings.volume === 0 ? 0 : entry.original;
 
   function rememberVolume(media, entry) {
     // DOM volumechange is asynchronous. A source/pause/settings event can run
@@ -169,8 +172,17 @@
   }
 
   function write(media, entry, volume) {
+    if (volume === 0 && entry.original > 0) {
+      const lease = JSON.stringify({ volume: entry.original, until: performance.now() + 1200 });
+      media.setAttribute(LEASE, lease);
+      media.dispatchEvent(new Event('volume-balancer-lease', { bubbles: true, composed: true }));
+      if (media.getAttribute(ACK) !== lease) return false; // Never suppress without independent recovery.
+    } else {
+      media.removeAttribute(LEASE); media.removeAttribute(ACK);
+    }
     entry.applied = Math.max(0, Math.min(1, volume));
     if (Math.abs(media.volume - entry.applied) > 0.0001) media.volume = entry.applied;
+    return true;
   }
 
   function release(entry) {
@@ -218,7 +230,7 @@
   }
 
   async function analyse(media, entry) {
-    if (!active() || media.paused || entry.meter || entry.failed || entry.pending) return;
+    if (!active() || controlling(media) || media.paused || entry.meter || entry.failed || entry.pending) return;
     if (!media.captureStream || media.readyState < 3) return;
     entry.pending = true;
     const generation = entry.generation || 0;
@@ -236,7 +248,7 @@
       // Do not suppress native playback while autoplay keeps Web Audio suspended.
       if (context.state !== 'running' || !active() || generation !== (entry.generation || 0)) return;
       let workletAvailable = false;
-      if (context.audioWorklet && !nativeOnly) {
+      if (context.audioWorklet) {
         const api = runtimeAccess();
         if (!api) return;
         let url;
@@ -258,12 +270,12 @@
         analyser.fftSize = 2048;
         source.connect(analyser);
         entry.meter = { stream, source, analyser, samples: new Float32Array(analyser.fftSize), verified: false, lastSignal: performance.now() };
-        timer ||= setInterval(tick, nativeOnly ? 250 : 25);
+        timer ||= setInterval(tick, 25);
         return;
       }
       node = new AudioWorkletNode(context, 'balance-normalizer', {
         numberOfInputs: 1, numberOfOutputs: 1, outputChannelCount: [2],
-        channelCount: 2, channelCountMode: 'explicit', processorOptions: { ...settings, levelerState: entry.levelerState },
+        channelCount: 2, channelCountMode: 'explicit', processorOptions: { ...settings, levelerState: entry.levelerState, requiresHeartbeat: true },
       });
       gate = context.createGain();
       gate.gain.value = 0;
@@ -284,6 +296,7 @@
         // A track can stay live while CORS/decoder restrictions deliver zeros.
         // Also reject callbacks queued before stop/source change/disposal.
         if (entry.meter !== meter || !active() || media.paused || !media.isConnected) return;
+        node.port.postMessage({ type: 'heartbeat' });
         rememberVolume(media, entry);
         meter.metrics = data;
         meter.lastMetrics = performance.now();
@@ -295,9 +308,9 @@
         if (Number.isFinite(data.inputRms) && data.inputRms > 1e-7 &&
             Number.isFinite(data.outputRms) && data.outputRms > 1e-7) {
           meter.lastSignal = performance.now();
-          if (!meter.verified && !media.muted && entry.original > 0 && settings.volume > 0) {
+          if (!media.muted && entry.original > 0 && settings.volume > 0) {
             meter.verified = true;
-            write(media, entry, 0);
+            if (!write(media, entry, 0)) { fallback(); return; }
             gate.gain.value = entry.original;
           }
           entry.failures = 0;
@@ -321,6 +334,7 @@
 
   function apply(media, entry) {
     rememberVolume(media, entry);
+    if (controlling(media)) { release(entry); write(media, entry, entry.original); return; }
     if (active()) {
       if (entry.meter?.node) {
         const meter = entry.meter;
@@ -335,7 +349,7 @@
         }
       } else {
         // Unproven or unavailable capture must leave native playback alone.
-        write(media, entry, !nativeOnly && entry.meter?.verified && !media.muted ? (entry.original === 0 ? 0 : requestedVolume(entry)) : nativeVolume(entry));
+        write(media, entry, entry.meter?.verified && !media.muted ? (entry.original === 0 ? 0 : requestedVolume(entry)) : nativeVolume(entry));
         analyse(media, entry);
       }
     } else {
@@ -351,8 +365,8 @@
     if (!runtimeAccess()) return;
     for (const [media, entry] of elements) {
       rememberVolume(media, entry);
-      if (!media.isConnected) { release(entry); media.removeEventListener('volumechange', entry.onVolume); media.removeEventListener('volumechange', entry.onMute); elements.delete(media); continue; }
-      if (!active() || media.paused || media.ended) {
+      if (!media.isConnected) { release(entry); media.removeEventListener('volumechange', entry.onVolume); media.removeEventListener('volumechange', entry.onMute); media.removeEventListener('volume-balancer-intent', entry.onIntent); media.removeEventListener('volume-balancer-control', entry.onControl); media.removeEventListener('volume-balancer-expired', entry.onExpire); elements.delete(media); continue; }
+      if (!active() || controlling(media) || media.paused || media.ended) {
         release(entry);
         write(media, entry, nativeVolume(entry));
         continue;
@@ -387,7 +401,6 @@
       }
       if (!entry.meter.verified) continue;
       if (media.muted) { write(media, entry, nativeVolume(entry)); continue; }
-      if (nativeOnly) continue; // No writes that the site could persist as user intent.
       // Captured media volume is independent of the element's volume setting.
       entry.gain = entry.leveler.update(rms * rms, seconds, settings.normalize);
       // Limit sampled peaks even if loudness normalization is disabled.
@@ -412,6 +425,21 @@
       resumeAfterActivation();
     };
     media.addEventListener('volumechange', entry.onMute);
+    entry.onIntent = () => {
+      if (media.getAttribute(INTENT) !== '0') return;
+      media.removeAttribute(INTENT);
+      entry.original = entry.applied = 0;
+      apply(media, entry);
+    };
+    media.addEventListener('volume-balancer-intent', entry.onIntent);
+    entry.onControl = () => { apply(media, entry); quiesce(); };
+    media.addEventListener('volume-balancer-control', entry.onControl);
+    entry.onExpire = () => {
+      rememberVolume(media, entry); release(entry);
+      entry.failed = true; entry.retryAt = performance.now() + 1000;
+      write(media, entry, entry.original); quiesce();
+    };
+    media.addEventListener('volume-balancer-expired', entry.onExpire);
     elements.set(media, entry);
     apply(media, entry);
     schedulePresence();
@@ -436,6 +464,7 @@
         release(entry);
         write(media, entry, nativeVolume(entry));
         media.removeEventListener('volumechange', entry.onVolume); media.removeEventListener('volumechange', entry.onMute);
+        media.removeEventListener('volume-balancer-intent', entry.onIntent); media.removeEventListener('volume-balancer-control', entry.onControl); media.removeEventListener('volume-balancer-expired', entry.onExpire);
         elements.delete(media);
       }
     }
@@ -560,7 +589,7 @@
     }
     return send({ target: 'background', type: 'PAGE_REPORT', data: {
       title: document.title, mediaCount: [...elements.keys()].filter(media => media.isConnected).length,
-      playingCount, processed, outputPeak, requiresCapture: nativeOnly,
+      playingCount, processed, outputPeak, requiresCapture: false,
       enhancement: !playingCount ? 'idle' : !processed ? 'unavailable'
         : enhancements.length === playingCount && enhancements.every(mode => mode === enhancements[0])
           ? enhancements[0] : 'switching', inputRms: unknown ? null : Math.sqrt(inputEnergy),

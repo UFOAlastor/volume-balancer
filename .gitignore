@@ -6,9 +6,12 @@
 !/NOTICE.txt
 !/extension/
 !/extension/**
+!/verification/
+!/verification/**
 !/docs/
 !/docs/USAGE.md
 !/docs/COMPATIBILITY.md
+!/docs/VALIDATION-1.2.0.md
 !/docs/ACKNOWLEDGEMENTS.md
 !/docs/assets/
 !/docs/assets/popup-active.png

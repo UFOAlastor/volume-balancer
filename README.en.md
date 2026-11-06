@@ -23,7 +23,7 @@ Requires **Microsoft Edge 116+**. Install manually using the GitHub package belo
 
 - Automatic loudness leveling is enabled by default, with **100%** volume on a fresh installation. You can turn leveling off and continue using volume controls.
 - Adjust global volume with the slider or presets. Mute, adjust, stop, or resume processing for individual pages. Processing continues when you close the popup.
-- On Bilibili, start playback and click the extension's toolbar icon. The popup automatically attempts whole-tab audio capture; retry in the popup if it fails. The player's existing mute and zero-volume settings take priority.
+- On supported Bilibili, YouTube and other audio/video pages, normal playback starts automatic processing without opening the popup. The player's mute and zero-volume choices take priority.
 - For other pages that need whole-tab processing, use the current-page capture controls. Turning off automatic mode does not stop an active whole-tab capture; stop it separately.
 
 <img src="docs/assets/popup-active.png" alt="Chinese interface example showing global volume and per-page controls" width="390">
@@ -32,7 +32,7 @@ Requires **Microsoft Edge 116+**. Install manually using the GitHub package belo
 
 ## Compatibility and listening tips
 
-Start at a comfortable volume and increase it gradually. High gain may amplify background noise and reduce dynamics; the actual increase depends on the source and peak limits. Volume may change when processing stops. If playback sounds wrong, refresh the page and play it again.
+Start at a comfortable volume and increase it gradually. Boost increases progressively above 200%; high gain may amplify background noise, reduce dynamics and introduce distortion. The actual increase depends on the source and peak limits. Volume may change when processing stops. If playback sounds wrong, refresh the page and play it again.
 
 Cross-origin media, DRM, and website restrictions may limit processing. Some sources only support volume reduction; check the page's status in the popup. Peak protection applies only to sources that can be processed and does not guarantee safe system output or listening levels. Use the original player's controls on browser internal pages, extension pages, and local files.
 

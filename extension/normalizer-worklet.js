@@ -13,14 +13,19 @@ class BalanceNormalizer extends AudioWorkletProcessor {
       this.dsp.gain = previous.gain;
     }
     this.frames = 0;
+    this.requiresHeartbeat = options.processorOptions?.requiresHeartbeat === true;
+    this.withoutHeartbeat = 0;
     this.disposed = false;
     this.port.onmessage = ({ data }) => {
       if (data?.type === 'dispose') this.disposed = true;
+      else if (data?.type === 'heartbeat') this.withoutHeartbeat = 0;
       else if (!this.disposed) this.dsp.configure(data);
     };
   }
 
   process(inputs, outputs) {
+    this.withoutHeartbeat += outputs[0][0]?.length || 0;
+    if (this.requiresHeartbeat && this.withoutHeartbeat > sampleRate * .8) this.disposed = true;
     if (this.disposed) {
       for (const channel of outputs[0] || []) channel.fill(0);
       return false;

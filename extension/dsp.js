@@ -72,6 +72,20 @@ export class BalanceDSP {
         this.delay[c][this.cursor] = Math.max(-1e6, Math.min(1e6, sample * gain * volume));
         peak = Math.max(peak, Math.abs(this.delay[c][this.cursor]));
       }
+      // Above 200% only: one linked instantaneous soft shoulder.
+      if (volume > 2 && peak > 0) {
+        const strength = Math.min(1, (volume - 2) / 3);
+        const drive = 10 ** (3 * strength / 20);
+        const drivenPeak = peak * drive, knee = ceiling * .7;
+        const shapedPeak = drivenPeak <= knee ? drivenPeak
+          : knee + (ceiling - knee) * Math.tanh((drivenPeak - knee) / (ceiling - knee));
+        const factor = drive * (1 - strength + strength * shapedPeak / drivenPeak);
+        peak = 0;
+        for (let c = 0; c < output.length; c++) {
+          this.delay[c][this.cursor] *= factor;
+          peak = Math.max(peak, Math.abs(this.delay[c][this.cursor]));
+        }
+      }
       // Monotonic queue: maximum of the delayed sample and its future 10 ms.
       while (this.head !== this.tail && this.times[this.head] < this.frame - this.delayLength) this.head = (this.head + 1) % capacity;
       while (this.head !== this.tail && this.peaks[(this.tail - 1 + capacity) % capacity] <= peak) this.tail = (this.tail - 1 + capacity) % capacity;
