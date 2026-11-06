@@ -1,0 +1,443 @@
+{
+  "text_0232f34cde": {
+    "message": "About and licenses (opens in a new tab)"
+  },
+  "text_7a88d3f720": {
+    "message": "Volume presets"
+  },
+  "text_9a03ea35d5": {
+    "message": "Quiet · 30%"
+  },
+  "text_8b74475701": {
+    "message": "Everyday · 70%"
+  },
+  "text_c23ce1ad9c": {
+    "message": "Full · 100%"
+  },
+  "text_be5be2fc92": {
+    "message": "Automatic processing settings"
+  },
+  "text_d9e2ae0128": {
+    "message": "Enable on all pages by default"
+  },
+  "text_bdb27f5512": {
+    "message": "Automatic loudness leveling"
+  },
+  "text_74fac64887": {
+    "message": "Web audio leveling"
+  },
+  "text_52d25a9e30": {
+    "message": "About"
+  },
+  "text_252c450e64": {
+    "message": "Global volume"
+  },
+  "text_f85aac2742": {
+    "message": "Applies to pages following global settings"
+  },
+  "text_c1431be501": {
+    "message": "Output volume for pages following global settings"
+  },
+  "text_d19694a245": {
+    "message": "0 · Mute"
+  },
+  "text_9ee6956371": {
+    "message": "Loading settings…"
+  },
+  "text_9586429ea4": {
+    "message": "Balances changes in content loudness"
+  },
+  "text_8dfc6a5d06": {
+    "message": "Current page · Tab capture"
+  },
+  "text_9ecab778e0": {
+    "message": "Loading page…"
+  },
+  "text_6b5b3c7a69": {
+    "message": "See page status and volume controls below."
+  },
+  "text_f2bed822b9": {
+    "message": "Capture current tab audio"
+  },
+  "text_4d51a902c1": {
+    "message": "Page audio"
+  },
+  "text_a2f19cc345": {
+    "message": "Stop all tab captures"
+  },
+  "text_b82ddde361": {
+    "message": "Per-tab volume · ±10% per step"
+  },
+  "text_90bbc5fd2b": {
+    "message": "Open a page with audio or video to view and adjust its volume."
+  },
+  "text_b8784c8dd5": {
+    "message": "Retry"
+  },
+  "text_13359939fe": {
+    "message": "License documents"
+  },
+  "text_bf42d6075e": {
+    "message": "About and licenses · Volume Balancer"
+  },
+  "text_7d29bef57a": {
+    "message": "About and licenses ·"
+  },
+  "text_5c33f44b8b": {
+    "message": "Bring balance to web audio."
+  },
+  "text_fee2e6c2eb": {
+    "message": "Balance changes in web audio and video loudness, with 0–500% volume, sample-peak limiting and per-tab controls."
+  },
+  "text_38f7b53958": {
+    "message": "Local audio processing"
+  },
+  "text_676fcb9d55": {
+    "message": "Audio is processed locally without uploading it; settings are saved on this device."
+  },
+  "text_2ae01f96fd": {
+    "message": "Some cross-origin media, protected content or site restrictions may prevent processing. Peak limiting applies to each processable source; you still control the system mix and listening volume. Restricted sources may only support reducing volume, and sudden loud sounds may still pass through."
+  },
+  "text_1ba5f580ff": {
+    "message": "Sample-peak limiting"
+  },
+  "text_f0a0901bdd": {
+    "message": "When processing is available, high sample peaks are limited automatically. No main-panel adjustment is needed. New installations default to −1 dBFS; previously saved limits are preserved."
+  },
+  "text_a172961212": {
+    "message": "This limits digital sample peaks. It does not provide true-peak or LUFS normalization, or a hearing-safety guarantee. Reconstructed waveforms and combined sources may peak higher. A saved 0 dBFS setting still retains a guard of about −0.45 dBFS in the processing chain."
+  },
+  "text_9bf7b42c04": {
+    "message": "Full privacy notice"
+  },
+  "text_ede2bdbfe6": {
+    "message": "Origins and acknowledgements"
+  },
+  "text_4112bfb51f": {
+    "message": "Volume Balancer is based on"
+  },
+  "text_ed15c5e4b4": {
+    "message": ", originally authored by qiao. This is an independent modified version."
+  },
+  "text_a7582e7b82": {
+    "message": "Research into tone presets and usage consulted"
+  },
+  "text_3d7114281f": {
+    "message": "and"
+  },
+  "text_af9dbc0fcf": {
+    "message": ". Thanks to their authors and maintainers."
+  },
+  "text_7e93e729ee": {
+    "message": "Filter equations reference the"
+  },
+  "text_db631595cd": {
+    "message": " (by Robert Bristow-Johnson, edited by Raymond Toy); platform behavior references the"
+  },
+  "text_b1b1175a64": {
+    "message": ". The formula reference is covered by the W3C permissive document license."
+  },
+  "text_8d898e5a9d": {
+    "message": "These projects are research references. Their product code is not included, and these references do not imply feature parity or endorsement. Tone research remains in the project experiments and is not offered in this release. See the source notice below for other reviewed but unintegrated approaches and complete links."
+  },
+  "text_9fee2684c0": {
+    "message": "Full MIT license ↗"
+  },
+  "text_675b754017": {
+    "message": "Source and modification notice ↗"
+  },
+  "candidateNotice": {
+    "message": "Privacy notice ·"
+  },
+  "text_999664c382": {
+    "message": "Privacy notice · Volume Balancer"
+  },
+  "text_9d06d61ee4": {
+    "message": "Privacy notice"
+  },
+  "text_370d721f48": {
+    "message": "This notice describes local audio processing and data use by this extension. Refer to the installation source for publisher contact information."
+  },
+  "text_f6c9186659": {
+    "message": "Local audio control only"
+  },
+  "text_90b3db69a5": {
+    "message": "On permitted HTTP/HTTPS pages and frames, the extension detects media elements, playback and mute states. It uses page titles, tab identifiers and addresses to display and manage page audio."
+  },
+  "text_23a011c14f": {
+    "message": "Where permitted, automatic mode reads a live copy of player audio. Tab capture is attempted after the user opens the extension, or by clicking the capture button, and may include all playing sounds in the selected tab. Capture requests neither microphone nor camera access; video is disabled."
+  },
+  "text_c6e6ec47dd": {
+    "message": "Storage and retention"
+  },
+  "text_8ca3f01c13": {
+    "message": "Global volume, switches and peak limits are saved in local storage on this device, without sync storage. Per-tab volume and stop states, capture errors, media frame counts and document identifiers are kept in session storage; frame addresses may be used when document identifiers are unavailable. Entries are cleared when the corresponding tab closes; browser restarts and extension reloads or updates may clear session data."
+  },
+  "text_31564f1a47": {
+    "message": "Live audio samples, metrics and page titles are used for local operation and display. The extension has no audio-file recording or saving, browsing-history database or telemetry-upload feature. This statement does not cover caches, logs or network behavior of the browser, operating system or websites."
+  },
+  "text_f5fee4fa8a": {
+    "message": "Transmission and external links"
+  },
+  "text_b39ff1a4ea": {
+    "message": "This extension has no developer audio server, advertising or analytics SDK, or code that actively sends the above data to the developer. It does not sell that data or use it for advertising beyond audio control. Upstream and reference links open only when clicked, and destination sites have their own policies. Bundled license files can be read offline."
+  },
+  "text_60494d3832": {
+    "message": "Your controls"
+  },
+  "text_172818b5ec": {
+    "message": "You can disable automatic mode, stop processing per page, or restrict site access or disable the extension in Edge. After stopping, the page controls its audio again and volume may change or increase. If audio does not recover, refresh the page and play again. Disabling automatic mode does not stop existing tab captures; use Stop tab capture or Stop all tab captures separately."
+  },
+  "text_eb188215ed": {
+    "message": "Edge manages removal of extension storage on uninstall. Reinstallation or a different extension ID does not guarantee settings migration. Refer to the installation source for publisher contact information."
+  },
+  "text_9380ed0a5a": {
+    "message": "Back to About and licenses"
+  },
+  "text_b626a2480c": {
+    "message": "Volume Balancer audio engine"
+  },
+  "globalDetail": {
+    "message": " · Global volume"
+  },
+  "independentDetail": {
+    "message": " · Independent volume"
+  },
+  "actionForPage": {
+    "message": "$1: $2"
+  },
+  "unmute": {
+    "message": "Unmute"
+  },
+  "mute": {
+    "message": "Mute"
+  },
+  "resume": {
+    "message": "Resume"
+  },
+  "stop": {
+    "message": "Stop"
+  },
+  "discovering": {
+    "message": "Checking page audio status…"
+  },
+  "text_c274a6676b": {
+    "message": "Processing status is unconfirmed. Retry or stop tab capture."
+  },
+  "text_b3c21847e5": {
+    "message": "This page is not connected, so global volume is not applied. Refresh and retry, and check the extension has site access."
+  },
+  "text_1ceab61156": {
+    "message": "An audible page is not connected, so global volume is not applied to it. Open and refresh that page, then check the extension has site access."
+  },
+  "text_e1424fd122": {
+    "message": "Settings loaded; page processing is unconfirmed"
+  },
+  "text_190411f2af": {
+    "message": "Settings loaded; tab capture status is unavailable"
+  },
+  "text_43acb3d3a2": {
+    "message": "Automatic mode is on"
+  },
+  "text_09fcdba0f3": {
+    "message": "$1 tab(s) captured"
+  },
+  "text_b37bd8cdfa": {
+    "message": "Automatic mode is off"
+  },
+  "text_f991f79fa5": {
+    "message": "Current tab"
+  },
+  "text_38c80359d0": {
+    "message": "Tab capture status is unconfirmed. Stop capture or retry."
+  },
+  "text_abc49b6998": {
+    "message": "Tab capture is active and continues after closing this panel. Stopping restores original page audio."
+  },
+  "text_e7131d700f": {
+    "message": "Original page audio is still playing; extension volume and leveling are not applied. Opening the toolbar panel attempts capture; use the button below to retry if it fails."
+  },
+  "text_9907f70ce3": {
+    "message": "Refresh to connect automatic mode, or capture this tab's audio."
+  },
+  "text_4d8014ee0d": {
+    "message": "You can capture all tab audio while keeping automatic mode enabled."
+  },
+  "text_656105bada": {
+    "message": "Browser internal pages are unsupported."
+  },
+  "text_96d72cb112": {
+    "message": "Stop tab capture"
+  },
+  "text_83719d925a": {
+    "message": "Panel location check timed out. Please retry."
+  },
+  "text_eca2d8b4d9": {
+    "message": "Tab capture"
+  },
+  "text_f7eacc50af": {
+    "message": "Automatic mode"
+  },
+  "text_f006455e3b": {
+    "message": "Stopped"
+  },
+  "text_e5e4686f65": {
+    "message": "Muted"
+  },
+  "text_7674c9831c": {
+    "message": "Original audio (settings not applied)"
+  },
+  "text_c74861e309": {
+    "message": "Volume is zero"
+  },
+  "text_8b820cb9de": {
+    "message": "Waiting for playback"
+  },
+  "text_c1467a276c": {
+    "message": "Level unavailable"
+  },
+  "text_e6666b2eb3": {
+    "message": "Playing"
+  },
+  "text_b2299759c5": {
+    "message": "Audio processing stopped"
+  },
+  "text_8458e96a97": {
+    "message": "Tab capture connected; waiting to verify audio"
+  },
+  "text_8a41ea947d": {
+    "message": "Original page audio: the selected $1% is not applied. Click the toolbar extension icon to enable capture."
+  },
+  "text_93cb6f56b9": {
+    "message": "Amplification is unavailable or unconfirmed. Open the toolbar panel to capture tab audio."
+  },
+  "text_572fd6ce2e": {
+    "message": "This source is restricted; settings may not be applied. Try tab capture."
+  },
+  "text_c715688ec8": {
+    "message": "Audio processing enabled"
+  },
+  "text_8c3e139f89": {
+    "message": "This source is restricted; sudden loud sounds may still pass through."
+  },
+  "text_0268c087bc": {
+    "message": "Use global"
+  },
+  "text_7b98aaf973": {
+    "message": "Decrease volume by 10%: $1"
+  },
+  "text_5beee343af": {
+    "message": "Increase volume by 10%: $1"
+  },
+  "text_969e7e2dd5": {
+    "message": "Restore global volume: $1"
+  },
+  "text_0f4669c080": {
+    "message": "Globally disabled"
+  },
+  "text_6561205831": {
+    "message": "Panel closed."
+  },
+  "text_adf45534c9": {
+    "message": "$1 timed out; the result is unconfirmed. Retry or stop tab capture."
+  },
+  "text_8bb2cb84ba": {
+    "message": "The extension is not responding. Reopen the panel."
+  },
+  "text_89d1632412": {
+    "message": "Reading the current page"
+  },
+  "text_3d7d574177": {
+    "message": "Browser or audio page response timed out. Please retry."
+  },
+  "text_022246cabd": {
+    "message": "Tab capture startup cancelled."
+  },
+  "text_22067d1c43": {
+    "message": "Locally level and play audio from user-enabled tabs."
+  },
+  "text_a3477fe337": {
+    "message": "Audio processing page did not respond. Please retry."
+  },
+  "text_f4ea70d7bb": {
+    "message": "Volume Balancer · Managing $1 page(s)"
+  },
+  "text_9ab3c99161": {
+    "message": "Volume Balancer · No media pages being managed"
+  },
+  "text_7c8e07cee1": {
+    "message": "Media page"
+  },
+  "text_38cf0d730f": {
+    "message": "Tab capture status is unconfirmed. Retry or stop capture."
+  },
+  "text_5f4db766b1": {
+    "message": "Enabled tab"
+  },
+  "text_4572a61938": {
+    "message": "Tab capture startup timed out."
+  },
+  "text_ed1290cf4a": {
+    "message": "Tab capture failed: $1"
+  },
+  "text_2bb4d85145": {
+    "message": "Invalid audio source."
+  },
+  "text_0b95c2fde6": {
+    "message": "Tab capture interrupted; original audio restored. Open the extension to retry."
+  },
+  "text_fb2a191a48": {
+    "message": "Invalid page."
+  },
+  "text_3a1f972b64": {
+    "message": "The current page changed. Reopen the panel."
+  },
+  "text_f77a351106": {
+    "message": "Unknown operation."
+  },
+  "text_3d291aa5b5": {
+    "message": "Audio startup cancelled."
+  },
+  "text_78f19f242c": {
+    "message": "The audio engine could not start. Re-enable this page."
+  },
+  "text_b028661ebd": {
+    "message": "Audio page closed. Please retry."
+  },
+  "text_44c76c2546": {
+    "message": "Audio startup timed out; tab capture cancelled."
+  },
+  "text_10bfbf41cb": {
+    "message": "Audio page closed."
+  },
+  "text_7c63175b61": {
+    "message": "Tab capture interrupted; original audio restored: $1. Open the extension to retry."
+  },
+  "text_b468dc2e6e": {
+    "message": "Unable to keep reading and outputting valid audio"
+  },
+  "text_ec9a458952": {
+    "message": "Audio processor error"
+  },
+  "text_a60dd21571": {
+    "message": "Capture track ended or unavailable"
+  },
+  "text_62d4d18bee": {
+    "message": "Page audio ended. Please retry."
+  },
+  "text_cb5fbb4c65": {
+    "message": "Unknown audio operation."
+  },
+  "extensionName": {
+    "message": "Volume Balancer · Web Audio Leveling"
+  },
+  "extensionDescription": {
+    "message": "Balance changes in web audio and video loudness, with 0–500% volume, per-tab controls and sample-peak limiting."
+  },
+  "unsupportedPage": {
+    "message": "Enable on a regular HTTP/HTTPS page. Browser internal pages are unsupported."
+  },
+  "documentLanguage": {
+    "message": "en"
+  }
+}

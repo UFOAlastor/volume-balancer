@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Volume Balancer</title>
+<link href="popup.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="app-header">
+<img alt="" height="32" src="icon-32.png" width="32"/>
+<div class="brand"><h1>Volume Balancer</h1><p><span data-i18n="text_74fac64887">网页响度均衡</span> <span class="build-version" id="version"></span></p></div>
+<a aria-label="关于与许可（在新标签页打开）" class="about-link" data-i18n-aria-label="text_0232f34cde" href="about.html" rel="noopener" target="_blank"><span data-i18n="text_52d25a9e30">关于</span> <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+<section aria-labelledby="volume-title" class="volume-panel">
+<div class="volume-heading"><div><h2 data-i18n="text_252c450e64" id="volume-title">统一音量</h2><p data-i18n="text_f85aac2742">跟随统一设置的网页同步生效</p></div>
+<div class="volume-display"><output for="volume" id="volume-value">100</output><span>%</span></div>
+</div>
+<label class="sr-only" data-i18n="text_c1431be501" for="volume">跟随统一设置的网页输出音量</label>
+<input id="volume" max="500" min="0" step="1" type="range" value="100"/>
+<div class="range-labels"><span data-i18n="text_d19694a245">0 · 静音</span><span>500%</span></div>
+<div aria-label="音量快捷设置" class="presets" data-i18n-aria-label="text_7a88d3f720">
+<button aria-label="轻声 · 30%" data-i18n-aria-label="text_9a03ea35d5" data-volume="30" type="button">30%</button>
+<button aria-label="日常 · 70%" data-i18n-aria-label="text_8b74475701" data-volume="70" type="button">70%</button>
+<button aria-label="饱满 · 100%" data-i18n-aria-label="text_c23ce1ad9c" data-volume="100" type="button">100%</button>
+<button data-volume="150" type="button">150%</button><button data-volume="200" type="button">200%</button>
+</div>
+</section>
+<section aria-label="自动处理设置" class="settings-panel" data-i18n-aria-label="text_be5be2fc92">
+<div class="setting-row"><div class="feature-copy"><label data-i18n="text_d9e2ae0128" for="auto-enable">所有网页默认启用</label><p data-i18n="text_9ee6956371" id="status">正在读取设置…</p></div>
+<input aria-label="所有网页默认启用" checked="" class="switch" data-i18n-aria-label="text_d9e2ae0128" id="auto-enable" role="switch" type="checkbox"/>
+</div>
+<div class="setting-row"><div class="feature-copy"><label data-i18n="text_bdb27f5512" for="normalize">自动响度均衡</label><p data-i18n="text_9586429ea4">持续平衡内容中的强弱变化</p></div>
+<input aria-label="自动响度均衡" checked="" class="switch" data-i18n-aria-label="text_bdb27f5512" id="normalize" role="switch" type="checkbox"/>
+</div>
+</section>
+<p class="list-hint" hidden="" id="detection-hint" role="status"></p>
+<section aria-labelledby="current-title" class="current-card" hidden="">
+<p class="section-label" data-i18n="text_8dfc6a5d06">当前网页 · 整页接管</p><h2 data-i18n="text_9ecab778e0" id="current-title">正在读取网页…</h2>
+<p data-i18n="text_6b5b3c7a69" id="current-hint">网页状态和音量调节见下方列表。</p>
+<button class="primary" data-i18n="text_f2bed822b9" disabled="" id="toggle-current" type="button">接管当前网页声音</button>
+</section>
+<section aria-labelledby="sessions-title" class="sessions-section">
+<div class="section-heading"><h2 id="sessions-title"><span data-i18n="text_4d51a902c1">网页声音</span> <span id="session-count">0</span></h2><button class="text-button" data-i18n="text_a2f19cc345" hidden="" id="stop-all" type="button">停止全部接管</button></div>
+<p class="list-hint" data-i18n="text_b82ddde361">独立调节 · 每次 ±10%</p>
+<div id="sessions"><p class="empty" data-i18n="text_90bbc5fd2b">打开含有音视频的网页，即可查看音量和调节。</p></div>
+</section>
+<div hidden="" id="error" role="alert"><p id="error-message"></p><button class="text-button" data-i18n="text_b8784c8dd5" id="retry" type="button">重试</button></div>
+</main>
+<script src="popup.js" type="module"></script>
+</body>
+</html>

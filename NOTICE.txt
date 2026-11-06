@@ -1,0 +1,55 @@
+Volume Balancer
+Based on Balance Voice by qiao (MIT License).
+Copyright (c) 2026 qiao
+Upstream: https://github.com/tyrantqiao/balanceVoice
+Base revision: e043e8e880b85ce53443fea0c754b662eb2fced7
+
+Modifications: Volume Balancer branding and original application icon;
+quieter-output correction and 0-500% gain; gentle slider magnets;
+automatic media processing, persistent settings and media recovery fixes;
+redesigned monochrome popup, local about/licensing page, separated popup
+request lifecycle and session rendering; accessibility and concurrent-edit fixes;
+local privacy disclosure, candidate version identification; idle audio/worklet
+termination, shadow-root cleanup and leaner main-thread audio lifecycle;
+tests and documentation.
+
+This is a modified derivative, not an upstream release. The redesigned
+interface does not remove the upstream origin or MIT notice obligations.
+The complete original MIT license and copyright notice are included in LICENSE
+and must be retained in copies or substantial portions of the software.
+The application icon was created for Volume Balancer; no external icon assets
+are used. This project is not affiliated with the upstream author, Microsoft
+or Google.
+
+Research acknowledgements (not additional code dependencies)
+------------------------------------------------------------
+The following projects were consulted for tone presets, interaction design,
+listening-test methods or music dynamics research:
+EffeTune: https://github.com/Frieve-A/effetune
+Umbra: https://github.com/skyjacc/Umbra
+KoalaSound: https://github.com/Shik3i/KoalaSound
+AutoEq: https://github.com/jaakkopasanen/AutoEq
+Volume Control: https://github.com/Chaython/volumecontrol
+
+Filter formula and platform references:
+W3C Audio EQ Cookbook: https://www.w3.org/TR/audio-eq-cookbook/
+Adapted from Robert Bristow-Johnson's Audio-EQ-Cookbook; edited by Raymond Toy.
+The W3C document is subject to the W3C permissive document license.
+W3C Web Audio API: https://www.w3.org/TR/webaudio-1.0/
+
+Other documentation consulted, without integrating their code or models:
+FabFilter Pro-Q: https://www.fabfilter.com/help/pro-q/using/dynamic-eq
+TDR NOVA: https://docs.tokyodawn.net/nova-manual/
+RNNoise: https://github.com/xiph/rnnoise/blob/main/README
+WebRTC APM: https://webrtc.googlesource.com/src/+/refs/heads/main/api/audio/audio_processing.h
+Speex preprocessor: https://www.speex.org/docs/manual/speex-manual/node4.html
+FabFilter Pro-L 2: https://www.fabfilter.com/help/pro-l/using/outputoptions
+Ableton Live Limiter: https://www.ableton.com/en/manual/live-audio-effect-reference/#limiter
+
+These acknowledgements identify research references, not copied product code,
+new license obligations, endorsements or promises of equivalent features.
+Experimental tone filters remain in the source experiments directory only;
+they are excluded from this release package. Subjective benefits are unverified.
+The upstream MIT attribution and license above remain applicable in full.
+See docs/ACKNOWLEDGEMENTS.md in the source tree for the reference scope;
+the extension's local About page and this NOTICE remain available offline.

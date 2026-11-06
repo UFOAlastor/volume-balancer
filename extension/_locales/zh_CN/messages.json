@@ -1,0 +1,443 @@
+{
+  "text_0232f34cde": {
+    "message": "关于与许可（在新标签页打开）"
+  },
+  "text_7a88d3f720": {
+    "message": "音量快捷设置"
+  },
+  "text_9a03ea35d5": {
+    "message": "轻声 · 30%"
+  },
+  "text_8b74475701": {
+    "message": "日常 · 70%"
+  },
+  "text_c23ce1ad9c": {
+    "message": "饱满 · 100%"
+  },
+  "text_be5be2fc92": {
+    "message": "自动处理设置"
+  },
+  "text_d9e2ae0128": {
+    "message": "所有网页默认启用"
+  },
+  "text_bdb27f5512": {
+    "message": "自动响度均衡"
+  },
+  "text_74fac64887": {
+    "message": "网页响度均衡"
+  },
+  "text_52d25a9e30": {
+    "message": "关于"
+  },
+  "text_252c450e64": {
+    "message": "统一音量"
+  },
+  "text_f85aac2742": {
+    "message": "跟随统一设置的网页同步生效"
+  },
+  "text_c1431be501": {
+    "message": "跟随统一设置的网页输出音量"
+  },
+  "text_d19694a245": {
+    "message": "0 · 静音"
+  },
+  "text_9ee6956371": {
+    "message": "正在读取设置…"
+  },
+  "text_9586429ea4": {
+    "message": "持续平衡内容中的强弱变化"
+  },
+  "text_8dfc6a5d06": {
+    "message": "当前网页 · 整页接管"
+  },
+  "text_9ecab778e0": {
+    "message": "正在读取网页…"
+  },
+  "text_6b5b3c7a69": {
+    "message": "网页状态和音量调节见下方列表。"
+  },
+  "text_f2bed822b9": {
+    "message": "接管当前网页声音"
+  },
+  "text_4d51a902c1": {
+    "message": "网页声音"
+  },
+  "text_a2f19cc345": {
+    "message": "停止全部接管"
+  },
+  "text_b82ddde361": {
+    "message": "独立调节 · 每次 ±10%"
+  },
+  "text_90bbc5fd2b": {
+    "message": "打开含有音视频的网页，即可查看音量和调节。"
+  },
+  "text_b8784c8dd5": {
+    "message": "重试"
+  },
+  "text_13359939fe": {
+    "message": "许可文件"
+  },
+  "text_bf42d6075e": {
+    "message": "关于与许可 · Volume Balancer"
+  },
+  "text_7d29bef57a": {
+    "message": "关于与许可 ·"
+  },
+  "text_5c33f44b8b": {
+    "message": "让网页声音更从容。"
+  },
+  "text_fee2e6c2eb": {
+    "message": "自动平衡网页音视频的强弱变化，支持 0–500% 音量、峰值限制和逐页控制。"
+  },
+  "text_38f7b53958": {
+    "message": "本机声音处理"
+  },
+  "text_676fcb9d55": {
+    "message": "音频处理在本机完成，不上传音频；设置保存在本机。"
+  },
+  "text_2ae01f96fd": {
+    "message": "部分跨域媒体、受版权保护的内容或站点限制会影响处理。峰值保护针对单个可处理音源，系统混音和耳边音量仍需自行控制。受限音源可能仅支持调低音量，突发大声仍可能通过。"
+  },
+  "text_1ba5f580ff": {
+    "message": "峰值保护"
+  },
+  "text_f0a0901bdd": {
+    "message": "处理可用时会自动限制过高峰值，无需在主面板设置。新安装默认 −1 dBFS，旧版保存的上限继续沿用。"
+  },
+  "text_a172961212": {
+    "message": "这是数字采样峰值限制，不是 true-peak、LUFS 或听力安全保证；重建后的波形和多个音源叠加仍可能更高。旧版 0 dBFS 设置在音频处理链中仍保留约 −0.45 dBFS 的护栏。"
+  },
+  "text_9bf7b42c04": {
+    "message": "完整隐私说明"
+  },
+  "text_ede2bdbfe6": {
+    "message": "来源与致谢"
+  },
+  "text_4112bfb51f": {
+    "message": "Volume Balancer 基于"
+  },
+  "text_ed15c5e4b4": {
+    "message": "，原作者为 qiao。本项目为独立修改版本。"
+  },
+  "text_a7582e7b82": {
+    "message": "音色预设与使用方式的研究实际查阅了"
+  },
+  "text_3d7114281f": {
+    "message": "和"
+  },
+  "text_af9dbc0fcf": {
+    "message": "，感谢其作者与维护者。"
+  },
+  "text_7e93e729ee": {
+    "message": "滤波公式参考"
+  },
+  "text_db631595cd": {
+    "message": "（源自 Robert Bristow-Johnson，编辑 Raymond Toy），平台行为参考"
+  },
+  "text_b1b1175a64": {
+    "message": "。公式资料适用 W3C permissive document license。"
+  },
+  "text_8d898e5a9d": {
+    "message": "上述同类项目属于研究参考，未引入其产品代码，也不表示本扩展具备相同功能或获得其背书。音色研究保留在项目实验资料中，当前发行包未提供此功能。其他已查阅但未集成的方案与完整参考链接见下方来源说明。"
+  },
+  "text_9fee2684c0": {
+    "message": "完整 MIT 许可 ↗"
+  },
+  "text_675b754017": {
+    "message": "来源与修改说明 ↗"
+  },
+  "candidateNotice": {
+    "message": "隐私说明 ·"
+  },
+  "text_999664c382": {
+    "message": "隐私说明 · Volume Balancer"
+  },
+  "text_9d06d61ee4": {
+    "message": "隐私说明"
+  },
+  "text_370d721f48": {
+    "message": "本说明介绍本扩展的本机声音处理与数据使用方式。发布者联系信息请查阅安装来源提供的说明。"
+  },
+  "text_f6c9186659": {
+    "message": "仅用于本机声音控制"
+  },
+  "text_90b3db69a5": {
+    "message": "扩展在获准访问的 HTTP/HTTPS 网页及框架中识别音视频元素、播放和静音状态，并使用网页标题、标签页标识及地址来显示和管理网页声音。"
+  },
+  "text_23a011c14f": {
+    "message": "自动模式在允许时读取播放器的实时音频副本；整页接管会在用户唤起扩展后自动尝试，或点击接管按钮后捕获所选标签页音频，可能包含该标签页内所有正在播放的声音。捕获不请求麦克风或摄像头，视频关闭。"
+  },
+  "text_c6e6ec47dd": {
+    "message": "保存与保留"
+  },
+  "text_8ca3f01c13": {
+    "message": "统一音量、开关和峰值上限保存在本机 local 存储，不使用同步存储。逐页音量及停止状态、采集失败提示、媒体框架数量和文档标识保存在 session 存储；缺少文档标识时可能使用框架地址。关闭对应标签页时清理其条目；浏览器重启、扩展重载或更新可能清空会话数据。"
+  },
+  "text_31564f1a47": {
+    "message": "实时音频采样、指标和网页标题用于本机运行和显示。扩展没有音频文件录制或保存、浏览历史数据库、遥测上传功能。浏览器、操作系统及网页自身的缓存、日志和网络行为不属于这一保证。"
+  },
+  "text_f5fee4fa8a": {
+    "message": "传输和外部链接"
+  },
+  "text_b39ff1a4ea": {
+    "message": "本扩展没有开发者音频服务器、广告或统计 SDK，没有主动向开发者发送上述数据的代码，不出售这些数据，也不将其用于声音控制以外的广告用途。上游及参考项目链接仅在用户点击时打开，目标网站另有其政策；本机许可文件可离线读取。"
+  },
+  "text_60494d3832": {
+    "message": "你的控制"
+  },
+  "text_172818b5ec": {
+    "message": "可关闭自动模式、逐页停止，或在 Edge 扩展设置中限制站点访问/禁用扩展。停止后由网页继续控制声音，音量可能变化或变大；若声音未正常恢复，请刷新网页后重新播放。关闭自动模式不会停止已开启的整页接管，请另用停止整页或停止全部接管。"
+  },
+  "text_eb188215ed": {
+    "message": "卸载时由 Edge 管理扩展存储清理；重新安装或更换扩展 ID 后不保证设置自动迁移。发布者联系信息请查阅安装来源提供的说明。"
+  },
+  "text_9380ed0a5a": {
+    "message": "返回关于与许可"
+  },
+  "text_b626a2480c": {
+    "message": "Volume Balancer 音频引擎"
+  },
+  "globalDetail": {
+    "message": " · 跟随统一"
+  },
+  "independentDetail": {
+    "message": " · 独立音量"
+  },
+  "actionForPage": {
+    "message": "$1：$2"
+  },
+  "unmute": {
+    "message": "取消静音"
+  },
+  "mute": {
+    "message": "静音"
+  },
+  "resume": {
+    "message": "恢复"
+  },
+  "stop": {
+    "message": "停止"
+  },
+  "discovering": {
+    "message": "正在确认网页声音状态…"
+  },
+  "text_c274a6676b": {
+    "message": "应用状态尚未确认，请重试读取或停止接管"
+  },
+  "text_b3c21847e5": {
+    "message": "当前网页尚未连接，统一音量暂未生效。请刷新网页后重试，并确认扩展获准访问此网站。"
+  },
+  "text_1ceab61156": {
+    "message": "有正在发声的网页尚未连接，统一音量暂未作用于它。请打开该网页，刷新后重试，并确认扩展的网站访问权限。"
+  },
+  "text_e1424fd122": {
+    "message": "已读取设置，网页应用状态尚未确认"
+  },
+  "text_190411f2af": {
+    "message": "已读取设置，整页接管状态暂不可用"
+  },
+  "text_43acb3d3a2": {
+    "message": "自动模式已开启"
+  },
+  "text_09fcdba0f3": {
+    "message": "$1 个网页已接管"
+  },
+  "text_b37bd8cdfa": {
+    "message": "自动模式已关闭"
+  },
+  "text_f991f79fa5": {
+    "message": "当前标签页"
+  },
+  "text_38c80359d0": {
+    "message": "整页接管状态尚未确认，可停止接管或重试读取。"
+  },
+  "text_abc49b6998": {
+    "message": "整页接管中。关闭面板后继续生效；停止后恢复网页原声。"
+  },
+  "text_e7131d700f": {
+    "message": "当前仍为网页原声，扩展音量与均衡尚未生效。打开工具栏面板后自动尝试接管；失败可点下方重试。"
+  },
+  "text_9907f70ce3": {
+    "message": "可刷新网页以连接自动模式，或接管当前网页声音。"
+  },
+  "text_4d8014ee0d": {
+    "message": "可直接接管整页声音，无需关闭自动模式。"
+  },
+  "text_656105bada": {
+    "message": "浏览器内部页面不支持。"
+  },
+  "text_96d72cb112": {
+    "message": "停止整页接管"
+  },
+  "text_83719d925a": {
+    "message": "读取面板位置超时，请重试。"
+  },
+  "text_eca2d8b4d9": {
+    "message": "整页接管"
+  },
+  "text_f7eacc50af": {
+    "message": "自动模式"
+  },
+  "text_f006455e3b": {
+    "message": "已停止"
+  },
+  "text_e5e4686f65": {
+    "message": "已静音"
+  },
+  "text_7674c9831c": {
+    "message": "网页原声（设置未生效）"
+  },
+  "text_c74861e309": {
+    "message": "音量为零"
+  },
+  "text_8b820cb9de": {
+    "message": "等待播放"
+  },
+  "text_c1467a276c": {
+    "message": "电平不可读取"
+  },
+  "text_e6666b2eb3": {
+    "message": "正在播放"
+  },
+  "text_b2299759c5": {
+    "message": "声音处理已停止"
+  },
+  "text_8458e96a97": {
+    "message": "整页接管已连接，等待有效音频验证"
+  },
+  "text_8a41ea947d": {
+    "message": "当前为网页原声，所选 $1% 尚未生效；请点击工具栏扩展图标启用"
+  },
+  "text_93cb6f56b9": {
+    "message": "当前无法保证放大；请打开工具栏面板接管整页声音"
+  },
+  "text_572fd6ce2e": {
+    "message": "当前音源受限，设置可能未生效；可尝试整页接管"
+  },
+  "text_c715688ec8": {
+    "message": "声音处理已启用"
+  },
+  "text_8c3e139f89": {
+    "message": "当前音源受限，突发大声仍可能通过"
+  },
+  "text_0268c087bc": {
+    "message": "跟随统一"
+  },
+  "text_7b98aaf973": {
+    "message": "调低 10%：$1"
+  },
+  "text_5beee343af": {
+    "message": "调高 10%：$1"
+  },
+  "text_969e7e2dd5": {
+    "message": "恢复跟随统一音量：$1"
+  },
+  "text_0f4669c080": {
+    "message": "全局关闭"
+  },
+  "text_6561205831": {
+    "message": "面板已关闭。"
+  },
+  "text_adf45534c9": {
+    "message": "$1超时，结果尚未确认；可重试读取或停止接管。"
+  },
+  "text_8bb2cb84ba": {
+    "message": "扩展暂时没有响应，请重新打开面板。"
+  },
+  "text_89d1632412": {
+    "message": "读取当前网页"
+  },
+  "text_3d7d574177": {
+    "message": "浏览器或音频页面响应超时，请重试。"
+  },
+  "text_022246cabd": {
+    "message": "接管启动已取消。"
+  },
+  "text_22067d1c43": {
+    "message": "在本机均衡用户启用的标签页声音并播放处理后的音频。"
+  },
+  "text_a3477fe337": {
+    "message": "音频处理页面没有响应，请重试。"
+  },
+  "text_f4ea70d7bb": {
+    "message": "Volume Balancer · 正在管理 $1 个网页"
+  },
+  "text_9ab3c99161": {
+    "message": "Volume Balancer · 暂无音视频网页正在管理"
+  },
+  "text_7c8e07cee1": {
+    "message": "音视频网页"
+  },
+  "text_38cf0d730f": {
+    "message": "整页接管状态尚未确认，请重试读取或停止接管。"
+  },
+  "text_5f4db766b1": {
+    "message": "已启用的标签页"
+  },
+  "text_4572a61938": {
+    "message": "整页接管启动超时。"
+  },
+  "text_ed1290cf4a": {
+    "message": "整页接管未成功：$1"
+  },
+  "text_2bb4d85145": {
+    "message": "无效的音频来源。"
+  },
+  "text_0b95c2fde6": {
+    "message": "整页接管已中断，已恢复网页原声；请打开扩展重试。"
+  },
+  "text_fb2a191a48": {
+    "message": "无效的网页。"
+  },
+  "text_3a1f972b64": {
+    "message": "当前网页已切换，请重新打开面板。"
+  },
+  "text_f77a351106": {
+    "message": "未知操作。"
+  },
+  "text_3d291aa5b5": {
+    "message": "音频启动已取消。"
+  },
+  "text_78f19f242c": {
+    "message": "音频引擎未能启动，请重新启用当前网页。"
+  },
+  "text_b028661ebd": {
+    "message": "音频页面已关闭，请重试。"
+  },
+  "text_44c76c2546": {
+    "message": "音频启动超时，已取消接管。"
+  },
+  "text_10bfbf41cb": {
+    "message": "音频页面已关闭。"
+  },
+  "text_7c63175b61": {
+    "message": "整页接管已中断，已恢复网页原声：$1。请打开扩展重试。"
+  },
+  "text_b468dc2e6e": {
+    "message": "未能持续读取并输出有效音频"
+  },
+  "text_ec9a458952": {
+    "message": "音频处理器异常"
+  },
+  "text_a60dd21571": {
+    "message": "采集轨道已结束或不可用"
+  },
+  "text_62d4d18bee": {
+    "message": "网页音频已结束，请重试。"
+  },
+  "text_cb5fbb4c65": {
+    "message": "未知音频操作。"
+  },
+  "extensionName": {
+    "message": "Volume Balancer · 网页响度均衡"
+  },
+  "extensionDescription": {
+    "message": "自动均衡网页音视频的强弱变化，支持 0–500% 音量、逐页控制和峰值限制。"
+  },
+  "unsupportedPage": {
+    "message": "请在普通 HTTP / HTTPS 网页中启用，浏览器内部页面不支持。"
+  },
+  "documentLanguage": {
+    "message": "zh-CN"
+  }
+}

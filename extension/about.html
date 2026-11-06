@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="text_bf42d6075e">关于与许可 · Volume Balancer</title>
+<link href="popup.css" rel="stylesheet"/>
+<link href="about.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="about-page">
+<header class="about-header"><img alt="" height="48" src="icon-48.png" width="48"/><div><p class="section-label"><span data-i18n="text_7d29bef57a">关于与许可 ·</span> <span id="version"></span></p><h1>Volume Balancer</h1></div></header>
+<p class="intro" data-i18n="text_5c33f44b8b">让网页声音更从容。</p>
+<p data-i18n="text_fee2e6c2eb">自动平衡网页音视频的强弱变化，支持 0–500% 音量、峰值限制和逐页控制。</p>
+<section aria-labelledby="privacy-title"><h2 data-i18n="text_38f7b53958" id="privacy-title">本机声音处理</h2>
+<p data-i18n="text_676fcb9d55">音频处理在本机完成，不上传音频；设置保存在本机。</p>
+<p data-i18n="text_2ae01f96fd">部分跨域媒体、受版权保护的内容或站点限制会影响处理。峰值保护针对单个可处理音源，系统混音和耳边音量仍需自行控制。受限音源可能仅支持调低音量，突发大声仍可能通过。</p>
+</section>
+<section aria-labelledby="peak-title"><h2 data-i18n="text_1ba5f580ff" id="peak-title">峰值保护</h2>
+<p data-i18n="text_f0a0901bdd">处理可用时会自动限制过高峰值，无需在主面板设置。新安装默认 −1 dBFS，旧版保存的上限继续沿用。</p>
+<p data-i18n="text_a172961212">这是数字采样峰值限制，不是 true-peak、LUFS 或听力安全保证；重建后的波形和多个音源叠加仍可能更高。旧版 0 dBFS 设置在音频处理链中仍保留约 −0.45 dBFS 的护栏。</p>
+</section>
+<p><a data-i18n="text_9bf7b42c04" href="privacy.html">完整隐私说明</a></p>
+<section aria-labelledby="origin-title"><h2 data-i18n="text_ede2bdbfe6" id="origin-title">来源与致谢</h2>
+<p><span data-i18n="text_4112bfb51f">Volume Balancer 基于</span> <a href="https://github.com/tyrantqiao/balanceVoice" rel="noopener noreferrer" target="_blank">Balance Voice</a><span data-i18n="text_ed15c5e4b4">，原作者为 qiao。本项目为独立修改版本。</span></p>
+<p class="copyright">Copyright (c) 2026 qiao</p>
+<p><span data-i18n="text_a7582e7b82">音色预设与使用方式的研究实际查阅了</span> <a href="https://github.com/Frieve-A/effetune" rel="noopener noreferrer" target="_blank">EffeTune</a>、<a href="https://github.com/skyjacc/Umbra" rel="noopener noreferrer" target="_blank">Umbra</a>、<a href="https://github.com/Shik3i/KoalaSound" rel="noopener noreferrer" target="_blank">KoalaSound</a>、<a href="https://github.com/jaakkopasanen/AutoEq" rel="noopener noreferrer" target="_blank">AutoEq</a> <span data-i18n="text_3d7114281f">和</span> <a href="https://github.com/Chaython/volumecontrol" rel="noopener noreferrer" target="_blank">Volume Control</a><span data-i18n="text_af9dbc0fcf">，感谢其作者与维护者。</span></p>
+<p><span data-i18n="text_7e93e729ee">滤波公式参考</span> <a href="https://www.w3.org/TR/audio-eq-cookbook/" rel="noopener noreferrer" target="_blank">W3C Audio EQ Cookbook</a><span data-i18n="text_db631595cd">（源自 Robert Bristow-Johnson，编辑 Raymond Toy），平台行为参考</span> <a href="https://www.w3.org/TR/webaudio-1.0/" rel="noopener noreferrer" target="_blank">Web Audio API</a><span data-i18n="text_b1b1175a64">。公式资料适用 W3C permissive document license。</span></p>
+<p data-i18n="text_8d898e5a9d">上述同类项目属于研究参考，未引入其产品代码，也不表示本扩展具备相同功能或获得其背书。音色研究保留在项目实验资料中，当前发行包未提供此功能。其他已查阅但未集成的方案与完整参考链接见下方来源说明。</p>
+<nav aria-label="许可文件" data-i18n-aria-label="text_13359939fe"><a data-i18n="text_9fee2684c0" href="LICENSE" rel="noopener" target="_blank">完整 MIT 许可 ↗</a><a data-i18n="text_675b754017" href="NOTICE.txt" rel="noopener" target="_blank">来源与修改说明 ↗</a></nav>
+</section>
+</main>
+<script src="about.js" type="module"></script>
+</body>
+</html>

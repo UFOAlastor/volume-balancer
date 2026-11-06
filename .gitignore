@@ -1,0 +1,13 @@
+*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/NOTICE.txt
+!/extension/
+!/extension/**
+!/docs/
+!/docs/USAGE.md
+!/docs/COMPATIBILITY.md
+!/docs/ACKNOWLEDGEMENTS.md
+!/docs/assets/
+!/docs/assets/popup-active.png
