@@ -1,48 +1,43 @@
 # Volume Balancer · 网页响度均衡
 
-<img src="extension/icon-128.png" alt="Volume Balancer 黑白灰声波图标" width="72">
+**简体中文** · [English](README.en.md)
 
-打开网页，自动平衡声音大小。支持 **0–500%** 音量、逐页调节。本机处理。
+<img src="extension/icon-128.png" alt="Volume Balancer 图标" width="72">
+
+自动平衡网页声音大小，支持 **0–500% 音量**与**逐页控制**。音频在本机处理，界面支持简体中文和英文。
+
+[下载 1.1.2](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2) · [使用指引](docs/USAGE.md) · [兼容性说明](docs/COMPATIBILITY.md)
 
 ## 安装或更新
 
-当前源码版本为 **1.1.2**。适用于 Microsoft Edge 116+，本版在 Edge 156 验证。
+适用于 **Microsoft Edge 116+**。目前通过 GitHub 安装包手动安装；此发布不代表 Edge 商店已经上架。
 
-1. 下载并解压本仓库源码。
+1. 在[发布页](https://github.com/UFOAlastor/volume-balancer/releases/tag/v1.1.2)下载 **volume-balancer-1.1.2.zip**，解压到准备长期保留的文件夹。
 2. 打开 `edge://extensions/`，开启「开发人员模式」。
-3. 点击「加载解压缩的扩展」，选择包含 `manifest.json` 的目录。使用源码时选择 **extension 文件夹**。
-4. 在扩展菜单中固定 **Volume Balancer**，刷新已有音视频网页。
+3. 点击「加载解压缩的扩展」，选择包含 `manifest.json` 的解压目录。如果下载的是仓库源码，请选择其中的 **extension** 文件夹。
+4. 固定 **Volume Balancer** 图标，刷新已有音视频网页，然后正常播放。
 
-更新时保留安装目录，替换文件后点击「重新加载」，再刷新音视频网页。既有网页在刷新前可能无法继续处理；若声音异常，请刷新网页后重新播放。
+**更新：**将新版本解压到原安装目录，在扩展管理页点击「重新加载」，再刷新音视频网页。统一设置会保留；逐页设置在扩展重载、更新或浏览器重启后重置。
 
-## 使用
+## 日常使用
 
-<img src="docs/assets/popup-active.png" alt="本地候选版面板：统一音量与逐页控制" width="390">
+- 默认开启自动响度均衡，新安装默认音量 **100%**；可以独立关闭均衡并继续调节音量。
+- 用滑块或快捷档调整统一音量，也可对单个网页静音、调音量、停止或恢复处理。关闭面板后继续生效。
+- Bilibili 开始播放后，点击工具栏扩展图标，面板会自动尝试整页接管；失败时可在面板重试。播放器原有的静音和零音量设置仍优先。
+- 其他需要整页处理的网页，可使用「当前网页 · 整页接管」。关闭自动模式不会停止已开启的整页接管，需另行停止。
 
-- 正常播放网页音视频，默认开启的「所有网页默认启用」和「自动响度均衡」会自动平衡强弱变化。
-- 全新安装默认音量 **100%**，已有设置继续保留。可选 **30%、70%、100%、150%、200%** 快捷档，或用滑块调节 **0–500%**；键盘方向键按 1% 调整。
-- 统一音量与开关会记住，重启 Edge 后沿用。单页音量与停止状态保留至扩展重载、更新或浏览器重启；选择「跟随统一」恢复统一音量。
-- 「自动响度均衡」可单独关闭，关闭后保留音量调节和可用的峰值保护。
-- 网页列表支持静音、每次 ±10%、独立音量、跟随统一、停止与恢复。关闭面板后继续生效。
-- 整页接管入口位于「网页声音」上方的「当前网页 · 整页接管」卡片。自动模式开启时也能使用，无需关闭开关。
+<img src="docs/assets/popup-active.png" alt="中文界面示例：统一音量与逐页控制" width="390">
 
-点击面板右上角「关于」查看隐私说明、来源和完整许可。
+*上图为早期版本的中文界面示例，当前版本布局可能不同。*
 
 ## 使用提示
 
-- 在舒适音量下逐步调整。高增益可能放大底噪并压缩动态，实际增幅取决于音源和峰值上限；停止后由网页继续控制声音，音量可能变化或变大；若声音未正常恢复，请刷新网页后重新播放。
-- 处理可用时会自动限制过高峰值，旧版保存的上限继续沿用，主面板无需设置。它针对单个可处理音源；系统混音与耳边音量仍需自行控制。部分受限音源仅支持调低音量，突发大声仍可能通过。详见「关于」和[兼容性说明](docs/COMPATIBILITY.md)。
-- Bilibili 正常播放后，点击工具栏的 Volume Balancer 图标，面板会自动启用整页声音处理，无需再开额外开关。之后可调 0–500%，关闭面板仍继续生效；播放器自己的音量和静音保持不变。启用前或采集失败时，网页行会明确显示原声或未生效；失败可点击「接管当前网页声音」重试。
-- 部分跨域媒体、受版权保护的内容或站点限制会影响处理；面板会显示可用状态。浏览器内部页、扩展页和本地文件请使用原播放器调节。网页合成声音可尝试整页接管。
+从舒适音量逐步调整。高增益可能放大底噪、压缩动态；实际增幅取决于音源及峰值限制。停止处理后音量可能变化，若声音异常，请刷新网页后重新播放。
+
+跨域媒体、DRM 和站点限制可能影响处理；部分音源只能调低音量，请以面板状态为准。峰值保护仅作用于可处理音源，不保证系统混音或耳边音量安全。浏览器内部页、扩展页和本地文件请使用原播放器调节。详见[兼容性说明](docs/COMPATIBILITY.md)。
 
 ## 隐私与许可
 
-实时音频、媒体状态和网页标题用于本机声音控制与显示，设置保存在本机。完整数据用途与控制方式见[隐私说明](extension/privacy.html)。
+实时音频、媒体状态和网页标题用于本机声音控制与显示，设置保存在本机。可在扩展「关于」查看[隐私说明](extension/privacy.html)与完整许可。
 
-基于 [tyrantqiao/balanceVoice](https://github.com/tyrantqiao/balanceVoice)，原作者 **qiao**。完整 [MIT 许可](LICENSE) 与[来源说明](NOTICE.txt) 随安装包提供。
-
-## 来源与致谢
-
-感谢原作者 qiao 的 [Balance Voice](https://github.com/tyrantqiao/balanceVoice)，以及音色与交互研究中实际查阅的 [EffeTune](https://github.com/Frieve-A/effetune)、[Umbra](https://github.com/skyjacc/Umbra)、[KoalaSound](https://github.com/Shik3i/KoalaSound)、[AutoEq](https://github.com/jaakkopasanen/AutoEq) 和 [Volume Control](https://github.com/Chaython/volumecontrol)。同类项目的查阅与致谢不表示采用其代码、提供相同功能或获得其背书。
-
-[使用指引](docs/USAGE.md) · [完整致谢与参考资料](docs/ACKNOWLEDGEMENTS.md)
+基于 [tyrantqiao/balanceVoice](https://github.com/tyrantqiao/balanceVoice)，原作者 **qiao**。遵循 [MIT 许可](LICENSE)，保留[来源说明](NOTICE.txt)。更多参考项目见[完整致谢](docs/ACKNOWLEDGEMENTS.md)。
