@@ -76,8 +76,12 @@
       return raw === 0 && lease && this.getAttribute(LEASE) ? lease.volume : raw;
     },
     set(value) {
-      const explicitZero = leases.has(this) && Number(value) === 0;
+      const lease = leases.get(this);
+      const explicitZero = lease && Number(value) === 0;
       const unchanged = nativeVolume(this) === 0;
+      // A player may write its displayed volume back while we suppress native audio.
+      if (unchanged && lease && value === lease.volume &&
+          performance.now() < lease.until && this.hasAttribute(LEASE)) return;
       volume.set.call(this, value);
       if (explicitZero) {
         forget(this); this.setAttribute(INTENT, '0');
